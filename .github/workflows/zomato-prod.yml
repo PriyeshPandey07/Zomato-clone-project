@@ -5,6 +5,10 @@ on:
     branches:
     - main
 
+env:
+  IMAGE_NAME: priyeshpandey07/zomato
+
+  
 jobs:
   build-and-deploy:
       runs-on: ubuntu-latest
@@ -33,14 +37,16 @@ jobs:
         - name: Login to DockerHub
           run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
 
+        # Build
         - name: Build Docker Image
-          run: docker build -t ${{ secrets.DOCKER_USER }}/zomato-clone:latest .
+          run: docker build -t $IMAGE_NAME:latest .
 
+        # Push
         - name: Push Docker Image
-          run: docker push ${{ secrets.DOCKER_USER }}/zomato-clone:latest
+          run: docker push $IMAGE_NAME:latest
 
         - name: Trivy Image Scan
-          run: trivy image zomato-clone:latest > trivy.txt
+          run: trivy image $IMAGE_NAME:latest > trivy.txt
 
         - name: Deploy to EC2
           uses: appleboy/ssh-action@v1.0.3
