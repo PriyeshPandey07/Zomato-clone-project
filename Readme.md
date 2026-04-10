@@ -130,7 +130,7 @@ trivy.txt
 
 ---
 
-🚀 CI/CD with Jenkins
+**🚀 CI/CD with Jenkins**
 
 This project also supports Jenkins for enterprise-grade CI/CD automation.
 
@@ -143,7 +143,7 @@ This project also supports Jenkins for enterprise-grade CI/CD automation.
 6. Push Image to DockerHub
 7. Deploy on AWS EC2
 
-### 📌 Workflow Location
+### 📌 Pipeline Location
 
 ```
 Jenkinsfile/Jenkinsfile
