@@ -130,6 +130,27 @@ trivy.txt
 
 ---
 
+🚀 CI/CD with Jenkins
+
+This project also supports Jenkins for enterprise-grade CI/CD automation.
+
+⚙️ Jenkins Pipeline Stages
+1. Checkout Code from GitHub
+2. Install Dependencies
+3. Build Application
+4. Build Docker Image
+5. Security Scan (Trivy)
+6. Push Image to DockerHub
+7. Deploy on AWS EC2
+
+### 📌 Workflow Location
+
+```
+Jenkinsfile/Jenkinsfile
+```
+
+---
+
 ## 🚀 Deployment
 
 You can deploy this project on:
