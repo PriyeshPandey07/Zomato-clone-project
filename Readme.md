@@ -1,14 +1,181 @@
-Steps:-
-Step 1 — Launch an Ubuntu(22.04) T2 Large Instance
+# 🍽️ Zomato Clone Project (DevOps Enabled)
 
-Step 2 — Install Jenkins, Docker and Trivy. Create a Sonarqube Container using Docker.
+A full-stack **Zomato-inspired web application** with integrated **CI/CD pipeline, Docker containerization, and security scanning (DevOps)**.
 
-Step 3 — Install Plugins like JDK, Sonarqube Scanner, Nodejs, and OWASP Dependency Check.
+This project demonstrates real-world deployment practices using modern DevOps tools like **GitHub Actions, Docker, and Trivy**.
 
-Step 4 — Create a Pipeline Project in Jenkins using a Declarative Pipeline
+---
 
-Step 5 — Install OWASP Dependency Check Plugins
+## 🏗️ Architecture Diagram
 
-Step 6 — Docker Image Build and Push
+![CI/CD Architecture](./architecture.png)
 
-Step 7 — Deploy the image using Docker
+---
+
+## 🚀 Features
+
+* 🔍 Browse restaurants & food items
+* 🛒 Add to cart functionality
+* 📦 Order management system
+* 🖥️ Responsive UI
+* 🐳 Dockerized application
+* 🔄 Automated CI/CD pipeline
+* 🔐 Security scanning using Trivy
+
+---
+
+## 🏗️ Tech Stack
+
+### 🌐 Frontend
+
+* HTML, CSS, JavaScript
+
+### ⚙️ Backend
+
+* (Update this based on your project — Django / Node.js / etc.)
+
+
+### ⚙️ DevOps Tools
+
+* GitHub Actions (CI/CD)
+* Docker (Containerization)
+* Trivy (Security Scanning)
+
+---
+
+## 📁 Project Structure
+
+```
+Zomato-clone-project/
+│
+├── frontend/              # UI files
+├── backend/               # Application logic
+├── Dockerfile             # Docker build instructions
+├── .github/workflows/     # CI/CD pipeline
+├── trivy.txt              # Security scan report
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 🔹 Clone the Repository
+
+```bash
+git clone https://github.com/PriyeshPandey07/Zomato-clone-project.git
+cd Zomato-clone-project
+```
+
+---
+
+### 🔹 Run Locally
+
+```bash
+# Install dependencies (update as per your backend)
+npm install
+# or
+pip install -r requirements.txt
+
+# Start application
+npm start
+# or
+python manage.py runserver
+```
+
+---
+
+### 🐳 Run with Docker
+
+```bash
+# Build Image
+docker build -t zomato-app .
+
+# Run Container
+docker run -d -p 3000:3000 zomato-app
+```
+
+---
+
+## 🔄 CI/CD Pipeline (GitHub Actions)
+
+The pipeline automates:
+
+✔️ Code checkout
+✔️ Docker image build
+✔️ Image push to DockerHub
+✔️ Security scan using Trivy
+
+### 📌 Workflow Location
+
+```
+.github/workflows/main.yml
+```
+
+---
+
+## 🔐 Security Scanning (Trivy)
+
+The project uses **Trivy** to scan Docker images for vulnerabilities.
+
+```bash
+trivy image zomato-app:latest > trivy.txt
+```
+
+📄 Output is stored in:
+
+```
+trivy.txt
+```
+
+---
+
+## 🚀 Deployment
+
+You can deploy this project on:
+
+* AWS EC2
+* Docker containers
+* Kubernetes (future enhancement)
+
+---
+
+## 📈 Future Enhancements
+
+* 🔐 User authentication (JWT / OAuth)
+* 💳 Payment integration
+* 📊 Admin dashboard
+* ☸️ Kubernetes deployment
+* 🌍 Domain + HTTPS setup
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push and create a PR
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Priyesh Pandey**
+DevOps & Cloud Enthusiast 🚀
+
+---
+
+## ⭐ Show Your Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
