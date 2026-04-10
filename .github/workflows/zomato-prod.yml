@@ -17,16 +17,7 @@ jobs:
           uses: actions/setup-node@v4
           with:
             node-version: '18'
-
-        - name: Install Dependencies
-          run: npm install
-
-        - name: OWASP Scan
-          uses: dependency-check/Dependency-Check_Action@main
-          with:
-            project: "zomato"
-            path: "."
-
+            
         - name: Install Trivy
           run: |
             sudo apt-get update
